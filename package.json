@@ -5,6 +5,10 @@
   "version": "0.1.0",
   "author": "LitLifeSoftware <litlifesoftware@gmail.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
     "aos": "^2.3.4",
     "autoprefixer": "^10.3.1",
     "gatsby": "^3.10.2",
