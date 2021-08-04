@@ -1,10 +1,11 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "website-gatsby",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "LitLifeSoftware's website built with Gatsby and React",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "LitLifeSoftware <litlifesoftware@gmail.com>",
   "dependencies": {
+    "aos": "^2.3.4",
     "autoprefixer": "^10.3.1",
     "gatsby": "^3.10.2",
     "gatsby-plugin-gatsby-cloud": "^2.10.1",
@@ -28,7 +29,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
+  "license": "BSD-3",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -42,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/litlifesoftware/website-gatsby"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/litlifesoftware/website-gatsby/issues"
   }
 }
