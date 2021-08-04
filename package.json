@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "autoprefixer": "^10.3.1",
     "gatsby": "^3.10.2",
     "gatsby-plugin-gatsby-cloud": "^2.10.1",
     "gatsby-plugin-image": "^1.10.1",
@@ -14,10 +15,12 @@
     "gatsby-plugin-sharp": "^3.10.2",
     "gatsby-source-filesystem": "^3.10.0",
     "gatsby-transformer-sharp": "^3.10.0",
+    "postcss-cli": "^8.3.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "tailwindcss": "^2.2.7"
   },
   "devDependencies": {
     "prettier": "2.3.2"
@@ -33,7 +36,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "build:css": "postcss src/styles/tailwind.css -o src/styles/main.css",
+    "build:watch": "postcss src/styles/tailwind.css -o src/styles/main.css --watch"
   },
   "repository": {
     "type": "git",
