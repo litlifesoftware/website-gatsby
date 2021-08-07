@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `LitLitSoftware`,
-    description: `Choose a Lit Life.`,
+    description: `choose a lit life`,
     author: `@litlifesoftware`,
     siteUrl: `https://litlifesoftware.github.io/`,
   },
@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/img`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -26,7 +26,15 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/img/Icon-512.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: `${__dirname}/src/assets/img/`,
+        },
       },
     },
     `gatsby-plugin-gatsby-cloud`,
@@ -34,4 +42,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
