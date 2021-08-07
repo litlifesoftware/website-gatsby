@@ -18,9 +18,22 @@ module.exports = {
 
       black: colors.black,
       white: colors.white,
+      customRed: {
+        100: "#ffd3d3",
+        500: "#b19b9b",
+        600: "#8b788b",
+      },
+      herogradient: {
+        100: "#fcfcfc",
+        200: "#db9393",
+      },
       customGray: {
-        100: '#9e9e9e',
-        200: '#c1c1c1',
+        100: "#9e9e9e",
+        200: "#c1c1c1",
+      },
+      customBlue: {
+        500: "#5e6370",
+        700: "#204a62",
       },
       gray: colors.coolGray,
       red: colors.red,
@@ -251,8 +264,8 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
-      montserrat: ["Montserrat"],
       sans: [
+        "montserrat",
         "ui-sans-serif",
         "system-ui",
         "-apple-system",
