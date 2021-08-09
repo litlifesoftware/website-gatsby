@@ -5,12 +5,17 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
 
-import Header from "./header"
-import '../styles/main.css'
+import Header from "./header";
+import "../styles/main.css";
+import Navbar from "./navbar";
+import Footer from "./footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import CallToActionCard from "./calltoactioncard";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -21,35 +26,33 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
+
+  // Initialize the AOS package.
+  React.useEffect(() => {
+    AOS.init({
+      delay: 200,
+      duration: 800,
+      once: false,
+    });
+    AOS.refresh();
+  });
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+    <div className="flex flex-col h-screen">
+      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
+      <Navbar />
+      <div>
+        <main className="flex-1 overflow-y-auto">{children}</main>
+        <CallToActionCard />
+        <Footer />
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
