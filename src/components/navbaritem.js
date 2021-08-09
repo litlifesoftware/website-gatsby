@@ -3,30 +3,17 @@ import React from "react";
 
 function NavbarItem(props) {
   return (
-    <>
-      <li className="flex items-center">
-        <Link
-          className={
-            (props.navbarTransparent
-              ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
-              : "text-gray-800 hover:text-gray-600") +
-            " px-3 py-4 lg:py-2 flex items-center text-xs font-bold"
-          }
-          to={props.path}
-          onClick={() => props.collapseNavbar()}
-        >
-          <p
-            className={
-              (props.navbarTransparent
-                ? "lg:text-white text-gray-500"
-                : "text-gray-500") + "text-lg leading-lg "
-            }
-          >
-            {props.title}
-          </p>
-        </Link>
-      </li>
-    </>
+    <Link
+      className={
+        props.mobile
+          ? "text-gray-600 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+          : "text-gray-400 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
+      }
+      to={props.path}
+      onClick={()=>{}}
+    >
+      {props.title}
+    </Link>
   );
 }
 
