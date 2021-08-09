@@ -1,3 +1,3 @@
-import Logo512 from "../assets/img/Icon-512.svg";
+import Icon512 from "../assets/img/Icon-512.svg";
 
-export default Logo512;
+export default Icon512;
