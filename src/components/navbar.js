@@ -246,8 +246,8 @@ export default function Navbar(props) {
             <NavbarButton
               url="https://github.com/litlifesoftware"
               navbarTransparent={navbarTransparent}
-              bgColor={"bg-customRed-100"}
-              bgColorHover={"bg-customRed-500"}
+              bgColor={"bg-customRed-500"}
+              bgColorHover={"bg-gray-500"}
               label={<FontAwesomeIcon icon={faGithub} />}
             />
           </div>
