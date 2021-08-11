@@ -9,7 +9,7 @@ import NavbarButton from "./navbarbutton";
 // import LitLifeLogo from "../assets/img/smiley-icon-512px-1.png";
 
 import routes from "../routes/routes";
-import Icon256 from "./icon256";
+import Icon256 from "./icons/icon256";
 
 export default function Navbar(props) {
   const [drawerExpanded, setNavbarOpen] = useState(false);
