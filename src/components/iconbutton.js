@@ -7,7 +7,11 @@ export default function IconButton(props) {
     <button
       onClick={() => {}}
       className={
-        "bg-white hover:bg-gray-400 text-gray-600 hover:text-white " +
+        (props.bgColor ?? "bg-white") +
+        " " +
+        (props.textColor ?? "text-gray-600") +
+        " " +
+        "hover:bg-gray-400 hover:text-white " +
         " text-xs font-bold uppercase px-5 py-2 rounded-full shadow hover:shadow-md hover:text-white outline-none focus:outline-none lg:mr-1 lg:mb-0"
       }
       type="button"
