@@ -1,5 +1,5 @@
 import React from "react";
-import Icon256 from "./icons/icon256";
+import Icon256 from "./icons/icon_256";
 // import LitLifeLogoDark from "../assets/img/lit-life-software-dark-1.png";
 
 /**

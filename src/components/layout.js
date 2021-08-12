@@ -15,7 +15,7 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import CallToActionCard from "./calltoactioncard";
+import CallToAction from "./call_to_action";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
       <Navbar />
       <div>
         <main className="flex-1 overflow-y-auto">{children}</main>
-        <CallToActionCard />
+        <CallToAction />
         <Footer />
       </div>
     </div>
