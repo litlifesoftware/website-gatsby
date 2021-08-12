@@ -1,9 +1,8 @@
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGooglePlay } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
 import IconButton from "./iconbutton";
 
-export default function CallToActionCard(props) {
+export default function CallToAction(props) {
   return (
     <div className="bg-customRed-100">
       <div className="max-w-7xl mx-auto py-12 px-8 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
@@ -16,7 +15,7 @@ export default function CallToActionCard(props) {
           </p>
         </div>
         <div className="py-4">
-          <IconButton title="GOOGLE PLAY" icon={faGithub} />
+          <IconButton title="GOOGLE PLAY" icon={faGooglePlay} />
         </div>
       </div>
     </div>
