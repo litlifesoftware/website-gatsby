@@ -1,10 +1,10 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import IconButton from "../components/iconbutton";
-import Icon256 from "../components/icon256";
-import HistoryOfMeIcon from "../assets/img/HistoryOfMeIcon512.svg";
+import Icon256 from "../components/icons/icon_256";
+import authorData from "../data/authorData";
+import appsData from "../data/appsData";
+import AppFeaturePreview from "../components/app_feature_preview";
 
 const IndexPage = () => (
   <Layout>
@@ -19,7 +19,7 @@ const IndexPage = () => (
               data-aos="fade-up"
               className="text-center font-extrabold text-4xl tracking-wide text-gray-200"
             >
-              choose a lit life
+              {authorData.slogan}
             </div>
           </div>
         </div>
@@ -36,11 +36,7 @@ const IndexPage = () => (
                   About
                 </h6>
                 <p className="text-gray-600 font-light tracking-wider">
-                  LitLifeSoftware is an independent creator of mobile apps. All
-                  apps featured on this website are free to use and open source.
-                  We don't collect data and neither intent to do so in the
-                  future. Our goal is to provide offline-first and privacy
-                  oriented experiences.
+                  {authorData.description}
                 </p>
               </div>
             </div>
@@ -50,7 +46,15 @@ const IndexPage = () => (
     </section>
 
     <section className="relative py-20">
-    {/* <AppFeaturePreview icon={} /> */}
+      {appsData.map((item, key) => (
+        <AppFeaturePreview
+          key={key}
+          icon={item.icon}
+          title={item.title}
+          slogan={item.slogan}
+          description={item.description}
+        />
+      ))}
     </section>
   </Layout>
 );
