@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Icon256 from "../components/icons/icon_256";
 import authorData from "../data/authorData";
-import appsData from "../data/appsData";
+import productData from "../data/productData";
 import AppFeaturePreview from "../components/app_feature_preview";
 
 const IndexPage = () => (
@@ -46,7 +46,7 @@ const IndexPage = () => (
     </section>
 
     <section className="relative py-20">
-      {appsData.map((item, key) => (
+      {productData.map((item, key) => (
         <AppFeaturePreview
           key={key}
           icon={item.icon}
