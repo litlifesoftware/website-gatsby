@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Icon256 from "../components/icons/icon_256";
 import authorData from "../data/authorData";
-import productData from "../data/productData";
+import productData from "../data/product_data";
 import AppFeaturePreview from "../components/app_feature_preview";
 
 const IndexPage = () => (
