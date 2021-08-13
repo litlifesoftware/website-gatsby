@@ -9,6 +9,8 @@ export default function IconButton(props) {
       className={
         (props.bgColor ?? "bg-white") +
         " " +
+        (props.animated && "animate-pulse") +
+        " " +
         (props.textColor ?? "text-gray-600") +
         " " +
         "hover:bg-gray-400 hover:text-white " +
