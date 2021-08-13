@@ -1,6 +1,13 @@
 import React from "react";
+import routes from "../routes/routes";
+import links from "../routes/links";
+
+import FooterLink from "./footer_link";
 import Icon256 from "./icons/icon_256";
-// import LitLifeLogoDark from "../assets/img/lit-life-software-dark-1.png";
+import NavbarItem from "./navbaritem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { icon } from "@fortawesome/fontawesome-svg-core";
+import authorData from "../data/authorData";
 
 /**
  * Creates a Footer.
@@ -16,19 +23,15 @@ export default function Footer(props) {
         <div className="flex flex-wrap">
           <div className="w-full md:w-4/12 lg:mb-0">
             <div>
-              {/* <img
-                alt="..."
-                src={LitLifeLogoDark}
-                className="max-w-full"
-                style={{ maxWidth: "80px" }}
-              /> */}
               <Icon256 className="h-12 w-12" />
               <div className="py-4 text-left">
                 <h5 className="text-lg font-semibold text-white">
                   LitLifeSoftware
                 </h5>
                 <button className="bg-gray-300 font-bold text-xs font-mono rounded-full py-2 px-4 my-2 shadow-lg tracking-wider hover:bg-gray-200 text-gray-600 hover:text-gray-800 transition duration-500 ease-in-out">
-                  {"<view-source>"}
+                  <a href={authorData.githubRepository.url}>
+                    {"<view-source>"}
+                  </a>
                 </button>
               </div>
             </div>
@@ -38,7 +41,17 @@ export default function Footer(props) {
               <div className="py-4 text-left">
                 <h5 className="text-xl font-semibold text-white">Explore</h5>
                 <ul className="pt-2">
-                  <li>LINK</li>
+                  {routes.map((route, key) => {
+                    return (
+                      route.showOnNavbar && (
+                        <FooterLink
+                          key={key}
+                          title={route.title}
+                          path={route.path}
+                        />
+                      )
+                    );
+                  })}
                 </ul>
               </div>
             </div>
@@ -48,7 +61,17 @@ export default function Footer(props) {
               <div className="py-4 text-left">
                 <h5 className="text-xl font-semibold text-white">Privacy</h5>
                 <ul className="pt-2">
-                  <li>LINK</li>
+                  {routes.map((route, key) => {
+                    return (
+                      route.showOnFooter && (
+                        <FooterLink
+                          key={key}
+                          title={route.title}
+                          path={route.path}
+                        />
+                      )
+                    );
+                  })}
                 </ul>
               </div>
             </div>
@@ -58,13 +81,22 @@ export default function Footer(props) {
           <div className="flex flex-wrap">
             <div className="w-full md:w-4/12 lg:mb-0 mb-12 text-left">
               <p className="mt-1 text-xs text-gray-100 font-normal">
-                Google Play and the Google Play Store are trademarks of Google
-                LLC.
+                {authorData.playStoreNotice}
               </p>
             </div>
             <div className="w-full md:w-8/12 lg:mb-0 text-right">
               <div>
-                <li>LINK</li>
+                {links.map((link, key) => {
+                  return (
+                    <a
+                      href={link.url}
+                      key={key}
+                      className="text-gray-300 hover:text-white inline px-2 rounded-md text-2xl sm:text-lg font-medium"
+                    >
+                      {<FontAwesomeIcon icon={link.icon} />}
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
