@@ -5,22 +5,22 @@ import { Link } from "gatsby";
 import { useState } from "react";
 import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import NavbarItem from "./navbaritem";
-import NavbarButton from "./navbarbutton";
-// import LitLifeLogo from "../assets/img/smiley-icon-512px-1.png";
+import IconButton from "../components/iconbutton";
 
 import routes from "../routes/routes";
-import Icon256 from "./icons/icon256";
+import Icon256 from "./icons/icon_256";
 
 export default function Navbar(props) {
   const [drawerExpanded, setNavbarOpen] = useState(false);
   const [navbarTransparent, setNavbarTransparent] = useState(true);
+  const [isMounted, setIsMounted] = useState(true);
 
   function toggleNavbarOpen() {
     setNavbarOpen(!drawerExpanded);
   }
 
   function onScrollListener() {
-    if (window.scrollY >= 55) {
+    if (window.scrollY >= 55 && isMounted) {
       setNavbarTransparent(false);
     } else {
       setNavbarTransparent(true);
@@ -35,10 +35,12 @@ export default function Navbar(props) {
   }
 
   React.useEffect(() => {
+    setIsMounted(true);
     window.addEventListener("scroll", onScrollListener);
     return () => {
       window.removeEventListener("scroll", onScrollListener, true);
       setNavbarTransparent(false);
+      setIsMounted(false);
     };
   }, []);
 
@@ -243,12 +245,12 @@ export default function Navbar(props) {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <NavbarButton
-              url="https://github.com/litlifesoftware"
-              navbarTransparent={navbarTransparent}
-              bgColor={"bg-customRed-500"}
-              bgColorHover={"bg-gray-500"}
-              label={<FontAwesomeIcon icon={faGithub} />}
+            <IconButton
+              title="GitHub"
+              icon={faGithub}
+              textColor={navbarTransparent ? "text-gray-500" : "text-gray-600"}
+              bgColor={navbarTransparent ? "bg-customRed-100" : "bg-indigo-200"}
+              animated
             />
           </div>
         </div>
