@@ -27,6 +27,10 @@ module.exports = {
         100: "#fcfcfc",
         200: "#db9393",
       },
+      privacygradient: {
+        100: "#bde9f5",
+        200: "#f7e9f5",
+      },
       customGray: {
         100: "#9e9e9e",
         200: "#c1c1c1",
