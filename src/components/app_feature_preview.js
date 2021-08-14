@@ -30,7 +30,9 @@ const AppFeaturePreview = (props) => {
             </p>
             <p>{props.description}</p>
             <div className="mt-8 text-center sm:text-left">
-              <IconButton title="DOWNLOAD" icon={faGooglePlay} />
+              <a href={props.url}>
+                <IconButton title="DOWNLOAD" icon={faGooglePlay} />
+              </a>
             </div>
           </div>
         </div>
