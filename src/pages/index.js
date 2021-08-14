@@ -46,16 +46,19 @@ const IndexPage = () => (
     </section>
 
     <section className="relative py-20">
-      {productData.map((item, key) => (
-        <AppFeaturePreview
-          key={key}
-          icon={item.icon}
-          title={item.title}
-          slogan={item.slogan}
-          description={item.description}
-          url={item.url}
-        />
-      ))}
+      {productData.map((item, key) => {
+        return (
+          <AppFeaturePreview
+            key={key}
+            icon={item.icon}
+            title={item.title}
+            slogan={item.slogan}
+            description={item.description}
+            url={item.url}
+            route={item.route}
+          />
+        );
+      })}
     </section>
   </Layout>
 );
