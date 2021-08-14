@@ -1,5 +1,6 @@
 import { faGooglePlay } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
+import authorData from "../data/authorData";
 import IconButton from "./iconbutton";
 
 export default function CallToAction(props) {
@@ -15,7 +16,9 @@ export default function CallToAction(props) {
           </p>
         </div>
         <div className="py-4">
-          <IconButton title="GOOGLE PLAY" icon={faGooglePlay} />
+          <a href={authorData.playStoreDeveloperPage}>
+            <IconButton title="GOOGLE PLAY" icon={faGooglePlay} />
+          </a>
         </div>
       </div>
     </div>
