@@ -53,6 +53,7 @@ const IndexPage = () => (
           title={item.title}
           slogan={item.slogan}
           description={item.description}
+          url={item.url}
         />
       ))}
     </section>

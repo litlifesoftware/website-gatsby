@@ -5,6 +5,7 @@ import {
   faReddit,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import authorData from "../data/authorData";
 
 const links = [
   {
@@ -14,7 +15,7 @@ const links = [
   },
   {
     title: "Google Play",
-    url: "https://play.google.com/store/apps/dev?id=6358212632242842077",
+    url: authorData.playStoreDeveloperPage,
     icon: faGooglePlay,
   },
   {

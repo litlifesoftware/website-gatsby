@@ -11,6 +11,8 @@ const authorData = {
     title: "website-gatsby",
     url: "https://github.com/litlifesoftware/website-gatsby/",
   },
+  playStoreDeveloperPage:
+    "https://play.google.com/store/apps/dev?id=6358212632242842077",
   playStoreNotice:
     "Google Play and the Google Play Store are trademarks of Google LLC.",
 };
