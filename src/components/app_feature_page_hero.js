@@ -4,7 +4,7 @@ import * as React from "react";
 import IconButton from "./iconbutton";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
-const AppFeaturePageContent = (props) => {
+const AppFeaturePageHero = (props) => {
   return (
     <div className={props.backgroundColor ?? "bg-customBlue-700"}>
       <div className="py-12 lg:py-24">
@@ -55,4 +55,4 @@ const AppFeaturePageContent = (props) => {
   );
 };
 
-export default AppFeaturePageContent;
+export default AppFeaturePageHero;
