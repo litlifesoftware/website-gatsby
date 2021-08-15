@@ -12,6 +12,7 @@ const productData = [
     url: "https://play.google.com/store/apps/details?id=com.litlifesoftware.historyofme",
     latestRelease:
       "https://github.com/litlifesoftware/HistoryOfMe/releases/latest",
+    youtubeId: "58lSSH4YNj0",
     keywords: [
       { headline: "Relive", description: "Browse through your memories." },
       { headline: "Read", description: "Read your diary entries." },

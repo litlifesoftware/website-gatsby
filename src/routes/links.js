@@ -10,7 +10,7 @@ import authorData from "../data/authorData";
 const links = [
   {
     title: "GitHub",
-    url: "https://github.com/litlifesoftware",
+    url: authorData.github,
     icon: faGithub,
   },
   {
@@ -20,17 +20,17 @@ const links = [
   },
   {
     title: "Instagram",
-    url: "https://www.instagram.com/litlifesw/",
+    url: authorData.instagram,
     icon: faInstagram,
   },
   {
     title: "Reddit",
-    url: "https://www.reddit.com/user/litlifesoftware/",
+    url: authorData.reddit,
     icon: faReddit,
   },
   {
     title: "YouTube",
-    url: "https://www.youtube.com/channel/UC0r6RzrH6K1yTQoVYDfxVZg/",
+    url: authorData.youtube,
     icon: faYoutube,
   },
 ];
