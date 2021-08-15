@@ -5,7 +5,7 @@ import React from "react";
 export default function IconButton(props) {
   return (
     <button
-      onClick={() => {}}
+      onClick={props.onClick}
       className={
         (props.bgColor ?? "bg-white") +
         " " +
@@ -13,8 +13,11 @@ export default function IconButton(props) {
         " " +
         (props.textColor ?? "text-gray-600") +
         " " +
-        "hover:bg-gray-400 hover:text-white " +
-        " text-xs font-bold uppercase px-5 py-2 rounded-full shadow hover:shadow-md hover:text-white outline-none focus:outline-none lg:mr-1 lg:mb-0"
+        "hover:bg-gray-400 hover:text-white" +
+        " " +
+        "font-bold uppercase px-5 py-2 rounded-full shadow hover:shadow-md hover:text-white outline-none focus:outline-none lg:mr-1 lg:mb-0" +
+        " " +
+        "text-xs"
       }
       type="button"
       style={{ transition: "all .75s ease" }}
