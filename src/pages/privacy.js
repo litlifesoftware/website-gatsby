@@ -43,7 +43,7 @@ function PrivacyPage() {
           "text-gray-800 w-full bg-gradient-to-bl from-privacygradient-100 to-privacygradient-200"
         }
       >
-        <div className="max-w-7xl xl:w-1/2 mx-auto pt-16 pb-6 lg:pt-24 lg:pb-6 px-8 sm:px-6 lg:px-4 lg:flex lg:items-center lg:justify-between container">
+        <div className="max-w-7xl md:w-1/2 mx-auto pt-16 pb-6 lg:pt-24 lg:pb-6 px-8 sm:px-6 lg:px-4 lg:flex">
           <h2 className="text-2xl lg:text-3xl leading-9 font-extrabold tracking-tight text-gray-600 sm:leading-10 text-left">
             Privacy Policy
           </h2>
