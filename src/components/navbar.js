@@ -9,7 +9,7 @@ import IconButton from "../components/iconbutton";
 
 import routes from "../routes/routes";
 import Icon256 from "./icons/icon_256";
-import authorData from "../data/authorData";
+import authorData from "../data/author_data";
 import links from "../routes/links";
 import TailwindBurgerIcon from "./icons/tailwind_burger_icon";
 

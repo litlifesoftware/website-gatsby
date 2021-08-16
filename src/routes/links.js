@@ -5,7 +5,7 @@ import {
   faReddit,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import authorData from "../data/authorData";
+import authorData from "../data/author_data";
 
 const links = [
   {

@@ -7,7 +7,7 @@ import Icon256 from "./icons/icon_256";
 import NavbarItem from "./navbaritem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core";
-import authorData from "../data/authorData";
+import authorData from "../data/author_data";
 
 /**
  * Creates a Footer.
