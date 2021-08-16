@@ -17,7 +17,9 @@ export default function IconButton(props) {
         " " +
         "font-bold uppercase px-5 py-2 rounded-full shadow hover:shadow-md hover:text-white outline-none focus:outline-none lg:mr-1 lg:mb-0" +
         " " +
-        "text-xs"
+        "text-xs" +
+        " " +
+        "w-full sm:w-auto"
       }
       type="button"
       style={{ transition: "all .75s ease" }}
