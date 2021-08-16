@@ -23,12 +23,16 @@ const CookieBanner = () => {
    * cookie policy.
    */
   const [cookieConsentAccepted, setCookieConsentAccepted] = React.useState(
-    localStorage.getItem("cookie_concent") || ""
+    typeof window !== "undefined"
+      ? localStorage.getItem("cookie_concent") || ""
+      : false
   );
 
   // Bind the persisten storage to the current client state.
   React.useEffect(() => {
-    localStorage.setItem("cookie_concent", cookieConsentAccepted);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("cookie_concent", cookieConsentAccepted);
+    }
   }, [cookieConsentAccepted]);
 
   /**

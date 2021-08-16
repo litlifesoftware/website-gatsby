@@ -16,18 +16,9 @@ import Footer from "./footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import CallToAction from "./call_to_action";
+import CookieBanner from "./cookie_banner";
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   // Initialize the AOS package.
   React.useEffect(() => {
     AOS.init({
@@ -46,6 +37,7 @@ const Layout = ({ children }) => {
         <main className="flex-1 overflow-y-auto">{children}</main>
         <CallToAction />
         <Footer />
+        <CookieBanner />
       </div>
     </div>
   );
