@@ -8,7 +8,7 @@ import AppFeaturePreview from "../components/app_feature_preview";
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="LitLifeSoftware" />
 
     <div className="h-screen w-full bg-gradient-to-bl from-herogradient-100 to-herogradient-200">
       <div className="container mx-auto">
