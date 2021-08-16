@@ -9,6 +9,9 @@ import IconButton from "../components/iconbutton";
 
 import routes from "../routes/routes";
 import Icon256 from "./icons/icon_256";
+import authorData from "../data/authorData";
+import links from "../routes/links";
+import TailwindBurgerIcon from "./icons/tailwind_burger_icon";
 
 export default function Navbar(props) {
   const [drawerExpanded, setNavbarOpen] = useState(false);
@@ -187,37 +190,7 @@ export default function Navbar(props) {
             >
               <span className="sr-only">Open main menu</span>
 
-              <svg
-                className="block h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-
-              <svg
-                className="hidden h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              <TailwindBurgerIcon />
             </button>
           </div>
           {/* Desktop view */}
@@ -245,13 +218,19 @@ export default function Navbar(props) {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <IconButton
-              title="GitHub"
-              icon={faGithub}
-              textColor={navbarTransparent ? "text-gray-500" : "text-gray-600"}
-              bgColor={navbarTransparent ? "bg-customRed-100" : "bg-indigo-200"}
-              animated
-            />
+            <a href={authorData.github}>
+              <IconButton
+                title="GitHub"
+                icon={faGithub}
+                textColor={
+                  navbarTransparent ? "text-gray-500" : "text-gray-600"
+                }
+                bgColor={
+                  navbarTransparent ? "bg-customRed-100" : "bg-indigo-200"
+                }
+                animated
+              />
+            </a>
           </div>
         </div>
       </div>
