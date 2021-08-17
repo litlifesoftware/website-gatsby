@@ -1,6 +1,6 @@
-import { faGooglePlay, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import * as React from "react";
 import IconButton from "./iconbutton";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const AppFeatureTrailer = (props) => {
   return (

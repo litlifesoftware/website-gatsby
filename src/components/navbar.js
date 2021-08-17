@@ -1,16 +1,12 @@
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "gatsby";
 import { useState } from "react";
-import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import authorData from "../data/author_data";
+import routes from "../routes/routes";
 import NavbarItem from "./navbaritem";
 import IconButton from "../components/iconbutton";
-
-import routes from "../routes/routes";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Icon256 from "./icons/icon_256";
-import authorData from "../data/author_data";
-import links from "../routes/links";
 import TailwindBurgerIcon from "./icons/tailwind_burger_icon";
 
 export default function Navbar(props) {
@@ -48,134 +44,6 @@ export default function Navbar(props) {
   }, []);
 
   return (
-    // <>
-    //   <nav
-    //     className={
-    //       (navbarTransparent ? "transparent" : "bg-white shadow-md") +
-    //       " fixed z-50 w-full px-5 py-2 flex justify-between items-center"
-    //     }
-    //     style={{ transition: "all .15s ease" }}
-    //   >
-    //     <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-    //       <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-    //         <Link
-    //           className={
-    //             (navbarTransparent ? "text-white" : "text-gray-600") +
-    //             " text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase"
-    //           }
-    //           to="/"
-    //         >
-    //           {/* <img style={{ maxWidth: "40px" }} src={LitLifeLogo} alt="" /> */}
-    //           <h6>logo</h6>
-    //         </Link>
-    //         <button
-    //           className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-    //           type="button"
-    //           onClick={() => collapseNavbar()}
-    //         >
-    //           <FontAwesomeIcon
-    //             icon={faBars}
-    //             className={navbarTransparent ? "text-white" : "text-gray-600"}
-    //           />
-    //         </button>
-    //       </div>
-    //       <div
-    //         className={
-    //           "lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none" +
-    //           (navbarOpen ? " block rounded shadow-lg" : " hidden")
-    //         }
-    //         id="example-navbar-warning"
-    //       >
-    //         <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-    //           {routes.map((route, key) => {
-
-    //             if (route.showOnNavbar) {
-    //               return (
-    //                 <NavbarItem
-    //                   key={key}
-    //                   title={route.title}
-    //                   path={route.path}
-    //                   navbarTransparent={navbarTransparent}
-    //                   collapseNavbar={collapseNavbar}
-    //                 />
-    //               );
-    //             }
-    //           })}
-
-    //           {/* <NavbarItem
-    //             title={"Irid Film Club"}
-    //             navbarTransparent={navbarTransparent}
-    //           /> */}
-
-    //           {/* <li className="flex items-center">
-    //             <a
-    //               className={
-    //                 (navbarTransparent
-    //                   ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
-    //                   : "text-gray-800 hover:text-gray-600") +
-    //                 " px-3 py-4 lg:py-2 flex items-center text-xs font-bold"
-    //               }
-    //               href="#pablo"
-    //             >
-    //               <p
-    //                 className={
-    //                   (navbarTransparent
-    //                     ? "lg:text-gray-300 text-gray-500"
-    //                     : "text-gray-500") +
-    //                   "text-lg leading-lg "
-    //                 }
-    //               >
-    //                 Remaining Lifetime
-    //               </p>
-
-    //             </a>
-    //           </li> */}
-
-    //           {/* <li className="flex items-center">
-    //             <a
-    //               className={
-    //                 (navbarTransparent
-    //                   ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
-    //                   : "text-gray-800 hover:text-gray-600") +
-    //                 " px-3 py-4 lg:py-2 flex items-center text-xs font-bold"
-    //               }
-    //               href="#pablo"
-    //             >
-    //               <p
-    //                 className={
-    //                   (navbarTransparent
-    //                     ? "lg:text-gray-300 text-gray-500"
-    //                     : "text-gray-500") +
-    //                   "text-lg leading-lg "
-    //                 }
-    //               >
-    //                 Lit UI Kit
-    //               </p>
-    //               <span className="lg:hidden inline-block ml-2">Share</span>
-    //             </a>
-    //           </li> */}
-
-    //           <NavbarButton
-    //             url="https://play.google.com/store/apps/dev?id=6358212632242842077"
-    //             navbarTransparent={navbarTransparent}
-    //             bgColor={"bg-pink-400"}
-    //             bgColorHover={"bg-pink-600"}
-    //             label={"Google Play"}
-    //           />
-
-    //           <NavbarButton
-    //             url="https://github.com/litlifesoftware"
-    //             navbarTransparent={navbarTransparent}
-    //             bgColor={"bg-purple-400"}
-    //             bgColorHover={"bg-purple-600"}
-    //             label={<FontAwesomeIcon icon={faGithub} />}
-    //           />
-    //         </ul>
-    //       </div>
-    //     </div>
-    //   </nav>
-    // </>
-
     <nav className={getNavbarStyle()}>
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">

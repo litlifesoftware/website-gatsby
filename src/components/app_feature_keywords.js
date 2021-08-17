@@ -1,16 +1,4 @@
 import * as React from "react";
-import { Link, useStaticQuery } from "gatsby";
-
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import { faGithub, faGooglePlay } from "@fortawesome/free-brands-svg-icons";
-import IconButton from "../components/iconbutton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-import AppFeaturePageHero from "./app_feature_page_hero";
-import productData from "../data/product_data";
-//import RemainingLifetimeScreenshot from "../components/remaining_lifetime_screenshot";
-// import HistoryOfMePoster from "../assets/img/History_Of_Me_Website_Icon.png";
 
 const AppFeatureKeywords = (props) => {
   return (

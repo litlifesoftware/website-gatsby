@@ -1,7 +1,7 @@
-import { faGooglePlay } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
 import authorData from "../data/author_data";
 import IconButton from "./iconbutton";
+import { faGooglePlay } from "@fortawesome/free-brands-svg-icons";
 
 export default function CallToAction(props) {
   return (

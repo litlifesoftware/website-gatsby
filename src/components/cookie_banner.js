@@ -1,7 +1,7 @@
 import * as React from "react";
+import { Link } from "gatsby";
 import { faCookie, faMask } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "gatsby";
 import routes from "../routes/routes";
 import IconButton from "./iconbutton";
 import TailwindTimesIcon from "./icons/tailwind_times_icon";

@@ -1,12 +1,9 @@
 import React from "react";
 import routes from "../routes/routes";
 import links from "../routes/links";
-
 import FooterLink from "./footer_link";
 import Icon256 from "./icons/icon_256";
-import NavbarItem from "./navbaritem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { icon } from "@fortawesome/fontawesome-svg-core";
 import authorData from "../data/author_data";
 
 /**

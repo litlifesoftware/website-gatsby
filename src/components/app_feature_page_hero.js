@@ -1,8 +1,7 @@
-import { faGooglePlay } from "@fortawesome/free-brands-svg-icons";
-
 import * as React from "react";
 import IconButton from "./iconbutton";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faGooglePlay } from "@fortawesome/free-brands-svg-icons";
 
 const AppFeaturePageHero = (props) => {
   return (

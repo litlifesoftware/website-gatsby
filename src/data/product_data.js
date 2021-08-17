@@ -1,6 +1,5 @@
 import HistoryOfMeIcon from "../components/icons/history_of_me_icon";
 import RemainingLifetimeIcon from "../components/icons/remaining_lifetime_icon";
-import routes from "../routes/routes";
 
 const productData = [
   {

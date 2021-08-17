@@ -1,7 +1,7 @@
-import { faGooglePlay } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "gatsby";
 import * as React from "react";
+import { Link } from "gatsby";
 import IconButton from "./iconbutton";
+import { faGooglePlay } from "@fortawesome/free-brands-svg-icons";
 
 const AppFeaturePreview = (props) => {
   return (

@@ -7,16 +7,14 @@
 
 import * as React from "react";
 import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
-
-import Header from "./header";
-import "../styles/main.css";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import CallToAction from "./call_to_action";
 import CookieBanner from "./cookie_banner";
+// Tailwind main css file.
+import "../styles/main.css";
 
 const Layout = ({ children }) => {
   // Initialize the AOS package.
