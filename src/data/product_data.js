@@ -9,6 +9,7 @@ const productData = [
       "History of Me allows you to keep a private and digital diary on your phone.",
     icon: HistoryOfMeIcon,
     url: "https://play.google.com/store/apps/details?id=com.litlifesoftware.historyofme",
+    github: "https://github.com/litlifesoftware/HistoryOfMe",
     latestRelease:
       "https://github.com/litlifesoftware/HistoryOfMe/releases/latest",
     youtubeId: "58lSSH4YNj0",
@@ -19,22 +20,22 @@ const productData = [
     ],
     route: "/historyofme",
   },
-  {
-    title: "Remaining Lifetime",
-    slogan: "Keep track of your life achievements.",
-    description:
-      "Remaining Lifetime allows you to visualize your entire life and motivates you to make every month count.",
-    icon: RemainingLifetimeIcon,
-    url: "https://play.google.com/store/apps/details?id=com.litlifesoftware.remaining_lifetime",
-    latestRelease:
-      "https://github.com/litlifesoftware/RemainingLifetime/releases/latest",
-    keywords: [
-      { headline: "Track", description: "Keep track of your achievements." },
-      { headline: "Visualize", description: "Visualize your achievements." },
-      { headline: "Overview", description: "Overview where you are now." },
-    ],
-    route: "/remaininglifetime",
-  },
+  // {
+  //   title: "Remaining Lifetime",
+  //   slogan: "Keep track of your life achievements.",
+  //   description:
+  //     "Remaining Lifetime allows you to visualize your entire life and motivates you to make every month count.",
+  //   icon: RemainingLifetimeIcon,
+  //   url: "https://play.google.com/store/apps/details?id=com.litlifesoftware.remaining_lifetime",
+  //   latestRelease:
+  //     "https://github.com/litlifesoftware/RemainingLifetime/releases/latest",
+  //   keywords: [
+  //     { headline: "Track", description: "Keep track of your achievements." },
+  //     { headline: "Visualize", description: "Visualize your achievements." },
+  //     { headline: "Overview", description: "Overview where you are now." },
+  //   ],
+  //   route: "/remaininglifetime",
+  // },
 ];
 
 export default productData;
