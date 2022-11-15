@@ -17,6 +17,23 @@ import CookieBanner from "./cookie_banner";
 import "../styles/main.css";
 
 const Layout = ({ children }) => {
+  /**
+   * Stores the current state value stating whether the user has accepted the
+   * cookie policy.
+   */
+  const [cookieConsentAccepted, setCookieConsentAccepted] = React.useState(
+    typeof window !== "undefined"
+      ? localStorage.getItem("cookie_concent") || ""
+      : false
+  );
+
+  // Bind the persisten storage to the current client state.
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("cookie_concent", cookieConsentAccepted);
+    }
+  }, [cookieConsentAccepted]);
+
   // Initialize the AOS package.
   React.useEffect(() => {
     AOS.init({
@@ -32,10 +49,15 @@ const Layout = ({ children }) => {
       {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
       <Navbar />
       <div>
-        <main className="flex-1 overflow-y-auto overflow-x-hidden">{children}</main>
+        <main className="flex-1 overflow-y-auto overflow-x-hidden">
+          {children}
+        </main>
         <CallToAction />
-        <Footer />
-        <CookieBanner />
+        <Footer cookieConsentAccepted={cookieConsentAccepted} />
+        <CookieBanner
+          cookieConsentAccepted={cookieConsentAccepted}
+          setCookieConsentAccepted={setCookieConsentAccepted}
+        />
       </div>
     </div>
   );

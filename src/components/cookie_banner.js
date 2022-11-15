@@ -12,38 +12,21 @@ import TailwindTimesIcon from "./icons/tailwind_times_icon";
  * Displays a banner component allowing the user to accept the cookie policy.
  *
  */
-const CookieBanner = () => {
+const CookieBanner = (props) => {
   /**
    * Stores the route meta data.
    */
   const routeData = routes[routes.length - 1];
 
   /**
-   * Stores the current state value stating whether the user has accepted the
-   * cookie policy.
-   */
-  const [cookieConsentAccepted, setCookieConsentAccepted] = React.useState(
-    typeof window !== "undefined"
-      ? localStorage.getItem("cookie_concent") || ""
-      : false
-  );
-
-  // Bind the persisten storage to the current client state.
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("cookie_concent", cookieConsentAccepted);
-    }
-  }, [cookieConsentAccepted]);
-
-  /**
    * Sets the `cookieConsentAccepted` to true.
    */
   function acceptCookies() {
-    setCookieConsentAccepted(true);
+    props.setCookieConsentAccepted(true);
   }
 
   return (
-    !cookieConsentAccepted && (
+    !props.cookieConsentAccepted && (
       <div className="py-3 px-3 sm:px-6 lg:px-8 fixed bottom-0 w-full z-50 bg-white shadow-offset bg-opacity-60 backdrop-filter backdrop-blur-md">
         <div className="mx-auto max-w-7xl flex items-center justify-between flex-wrap">
           <div className="w-0 flex-1 flex items-center">

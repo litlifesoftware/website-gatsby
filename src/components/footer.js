@@ -14,23 +14,6 @@ import Logo512 from "./icons/logo_512";
  * @param {Object} props
  */
 export default function Footer(props) {
-  /**
-   * Stores the current state value stating whether the user has accepted the
-   * cookie policy.
-   */
-  const [cookieConsentAccepted, setCookieConsentAccepted] = React.useState(
-    typeof window !== "undefined"
-      ? localStorage.getItem("cookie_concent") || ""
-      : false
-  );
-
-  // Bind the persisten storage to the current client state.
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("cookie_concent", cookieConsentAccepted);
-    }
-  }, [cookieConsentAccepted]);
-
   return (
     <div className="bg-customBlue-500">
       <div className="max-w-7xl mx-auto px-6 py-12 sm:px-6 sm:py-8 lg:px-8 lg:pt-12 lg:pb-16">
@@ -127,7 +110,7 @@ export default function Footer(props) {
         </div>
       </div>
       {/* Add bottom spacing to avoid overlapping with the cookie banner. */}
-      {!cookieConsentAccepted && <div className="h-20 sm:h-4"></div>}
+      {!props.cookieConsentAccepted && <div className="h-20 sm:h-4"></div>}
     </div>
   );
 }
