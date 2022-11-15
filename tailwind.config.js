@@ -18,14 +18,22 @@ module.exports = {
 
       black: colors.black,
       white: colors.white,
+      customTextColors: {
+        primary: "#444444",
+        secondary: "#686868",
+      },
+      customPurple: {
+        dark: "#8b788b"
+      }, 
       customRed: {
         100: "#ffd3d3",
         500: "#b19b9b",
         600: "#8b788b",
+        logo: "#ff9999",
       },
       herogradient: {
-        100: "#fcfcfc",
-        200: "#db9393",
+        100: "#fff3f3",
+        200: "#e49a9a",
       },
       privacygradient: {
         100: "#bde9f5",
@@ -34,6 +42,8 @@ module.exports = {
       customGray: {
         100: "#9e9e9e",
         200: "#c1c1c1",
+        300: "#dddddd",
+        400: "#272727"
       },
       customBlue: {
         500: "#5e6370",
