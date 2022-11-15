@@ -9,8 +9,8 @@ const AppFeatureKeywords = (props) => {
             return (
               <div key={key} className="px-6">
                 <div className="pt-6 text-left">
-                  <h5 className="text-2xl font-semibold text-gray-700">
-                    {item.headline}
+                  <h5 className="text-2xl font-semibold tracking-wider text-gray-700">
+                    {item.headline.toUpperCase()}
                   </h5>
                   <p className="mt-1 text-base text-gray-600 font-normal">
                     {item.description}
