@@ -2,9 +2,9 @@ import React from "react";
 import routes from "../routes/routes";
 import links from "../routes/links";
 import FooterLink from "./footer_link";
-import Icon256 from "./icons/icon_256";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import authorData from "../data/author_data";
+import Logo512 from "./icons/logo_512";
 
 /**
  * Creates a Footer.
@@ -14,39 +14,64 @@ import authorData from "../data/author_data";
  * @param {Object} props
  */
 export default function Footer(props) {
+  /**
+   * Stores the current state value stating whether the user has accepted the
+   * cookie policy.
+   */
+  const [cookieConsentAccepted, setCookieConsentAccepted] = React.useState(
+    typeof window !== "undefined"
+      ? localStorage.getItem("cookie_concent") || ""
+      : false
+  );
+
+  // Bind the persisten storage to the current client state.
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("cookie_concent", cookieConsentAccepted);
+    }
+  }, [cookieConsentAccepted]);
+
   return (
     <div className="bg-customBlue-500">
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
+      <div className="max-w-7xl mx-auto px-6 py-12 sm:px-6 sm:py-8 lg:px-8 lg:pt-12 lg:pb-16">
         <div className="flex flex-wrap">
           <div className="w-full md:w-4/12 lg:mb-0">
             <div>
-              <Icon256 className="h-12 w-12" />
+              <Logo512 className="h-12 w-12 text-white fill-current" />
               <div className="py-4 text-left">
-                <h5 className="text-lg font-semibold text-white">
+                <h5 className="text-2xl sm:text-lg font-semibold text-white">
                   LitLifeSoftware
                 </h5>
-                <button className="bg-gray-300 font-bold text-xs font-mono rounded-full py-2 px-4 my-2 shadow-lg tracking-wider hover:bg-gray-200 text-gray-600 hover:text-gray-800 transition duration-500 ease-in-out">
+                {/* <button className="bg-gray-300 font-bold text-xs font-mono rounded-full py-2 px-4 my-2 shadow-lg tracking-wider hover:bg-gray-200 text-gray-600 hover:text-gray-800 transition duration-500 ease-in-out">
                   <a href={authorData.githubRepository.url}>
                     {"<view-source>"}
                   </a>
-                </button>
+                </button> */}
+                <a
+                  href={authorData.githubRepository.url}
+                  className="text-base sm:text-xs font-mono py-2 tracking-wider text-white hover:text-gray-400 transition duration-500 ease-in-out"
+                >
+                  {"<view-source>"}
+                </a>
               </div>
             </div>
           </div>
           <div className="w-full md:w-4/12 lg:mb-0">
             <div>
               <div className="py-4 text-left">
-                <h5 className="text-xl font-semibold text-white">Explore</h5>
+                <h5 className="text-xl font-bold text-white tracking-widest">
+                  EXPLORE
+                </h5>
                 <ul className="pt-2">
                   {routes.map((route, key) => {
+                    const show = route.showOnFooter & !route.isLegal;
+                    if (!show) return;
                     return (
-                      route.showOnNavbar && (
-                        <FooterLink
-                          key={key}
-                          title={route.title}
-                          path={route.path}
-                        />
-                      )
+                      <FooterLink
+                        key={key}
+                        title={route.title}
+                        path={route.path}
+                      />
                     );
                   })}
                 </ul>
@@ -56,17 +81,19 @@ export default function Footer(props) {
           <div className="w-full md:w-4/12 lg:mb-0">
             <div>
               <div className="py-4 text-left">
-                <h5 className="text-xl font-semibold text-white">Privacy</h5>
+                <h5 className="text-xl font-bold text-white tracking-widest">
+                  PRIVACY
+                </h5>
                 <ul className="pt-2">
                   {routes.map((route, key) => {
+                    const show = route.showOnFooter & route.isLegal;
+                    if (!show) return;
                     return (
-                      route.showOnFooter && (
-                        <FooterLink
-                          key={key}
-                          title={route.title}
-                          path={route.path}
-                        />
-                      )
+                      <FooterLink
+                        key={key}
+                        title={route.title}
+                        path={route.path}
+                      />
                     );
                   })}
                 </ul>
@@ -99,6 +126,8 @@ export default function Footer(props) {
           </div>
         </div>
       </div>
+      {/* Add bottom spacing to avoid overlapping with the cookie banner. */}
+      {!cookieConsentAccepted && <div className="h-20 sm:h-4"></div>}
     </div>
   );
 }

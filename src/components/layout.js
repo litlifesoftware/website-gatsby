@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
       {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
       <Navbar />
       <div>
-        <main className="flex-1 overflow-y-auto">{children}</main>
+        <main className="flex-1 overflow-y-auto overflow-x-hidden">{children}</main>
         <CallToAction />
         <Footer />
         <CookieBanner />

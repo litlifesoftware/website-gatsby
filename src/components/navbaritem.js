@@ -6,8 +6,8 @@ function NavbarItem(props) {
     <Link
       className={
         props.mobile
-          ? "text-gray-600 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-          : "text-gray-400 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
+          ? "text-gray-600 hover:text-gray-700 block px-3 py-4 rounded-md text-lg font-medium"
+          : "text-customTextColors-primary hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
       }
       to={props.path}
       onClick={()=>{}}

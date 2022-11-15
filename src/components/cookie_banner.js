@@ -16,7 +16,7 @@ const CookieBanner = () => {
   /**
    * Stores the route meta data.
    */
-  const routeData = routes[3];
+  const routeData = routes[routes.length - 1];
 
   /**
    * Stores the current state value stating whether the user has accepted the

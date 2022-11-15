@@ -9,7 +9,7 @@ import Seo from "../components/seo";
 const NotFoundPage = () => (
   <Layout>
     <Seo title="404 - Not found" />
-    <div className="h-screen w-full bg-gradient-to-bl from-white to-gray-200">
+    <div className="min-h-screen w-full bg-gradient-to-bl from-white to-gray-200">
       <div className="container mx-auto">
         <div className="flex items-center justify-center h-screen w-full backdrop-blur-sm">
           <div className="text-center tracking-wide text-gray-700">

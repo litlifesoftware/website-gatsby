@@ -16,7 +16,7 @@ export default function IconButton(props) {
         " " +
         "font-bold uppercase px-5 py-2 rounded-full shadow hover:shadow-md hover:text-white outline-none focus:outline-none lg:mr-1 lg:mb-0" +
         " " +
-        "text-xs" +
+        "text-base sm:text-xs" +
         " " +
         "w-full sm:w-auto"
       }
@@ -27,7 +27,7 @@ export default function IconButton(props) {
         <span className="pr-2">
           <FontAwesomeIcon icon={props.icon} />
         </span>
-        <span className="font-semibold tracking-wider">{props.title}</span>
+        <span className="font-bold tracking-widest">{props.title}</span>
       </span>
     </button>
   );
