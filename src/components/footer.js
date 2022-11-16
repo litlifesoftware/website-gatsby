@@ -16,7 +16,15 @@ import Logo512 from "./icons/logo_512";
 export default function Footer(props) {
   return (
     <div className="bg-customBlue-500">
-      <div className="max-w-7xl mx-auto px-6 py-12 sm:px-6 sm:py-8 lg:px-8 lg:pt-12 lg:pb-16">
+      {/* Add bottom spacing to avoid overlapping with the cookie banner. */}
+
+      <div
+        className={`max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-12 sm:py-8 md:py-12 ${
+          props.cookieConsentAccepted
+            ? ""
+            : "pb-40 sm:pb-28 md:pb-24"
+        }`}
+      >
         <div className="flex flex-wrap">
           <div className="w-full md:w-4/12 lg:mb-0">
             <div>
@@ -109,8 +117,6 @@ export default function Footer(props) {
           </div>
         </div>
       </div>
-      {/* Add bottom spacing to avoid overlapping with the cookie banner. */}
-      {!props.cookieConsentAccepted && <div className="h-20 sm:h-4"></div>}
     </div>
   );
 }
