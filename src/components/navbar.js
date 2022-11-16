@@ -6,7 +6,6 @@ import routes from "../routes/routes";
 import NavbarItem from "./navbaritem";
 import IconButton from "../components/iconbutton";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import Icon256 from "./icons/icon_256";
 import Logo512 from "./icons/logo_512";
 import TailwindBurgerIcon from "./icons/tailwind_burger_icon";
 
@@ -19,22 +18,24 @@ export default function Navbar(props) {
     setNavbarOpen(!drawerExpanded);
   }
 
-  function onScrollListener() {
-    if (window.scrollY >= 55 && isMounted) {
-      setNavbarTransparent(false);
-    } else {
-      setNavbarTransparent(true);
-    }
-  }
-
   function getNavbarStyle() {
-    const defaultStyle = "fixed top-0 w-full z-50";
-    return drawerExpanded || !navbarTransparent
-      ? defaultStyle + " " + "bg-white shadow-md"
-      : defaultStyle + " " + "bg-transparent";
+    const style = "fixed top-0 w-full z-50";
+
+    if (drawerExpanded || !navbarTransparent)
+      return `${style} bg-white shadow-md`;
+
+    return `${style} bg-transparent`;
   }
 
   React.useEffect(() => {
+    const onScrollListener = () => {
+      if (window.scrollY >= 55 && isMounted) {
+        setNavbarTransparent(false);
+      } else {
+        setNavbarTransparent(true);
+      }
+    };
+
     setIsMounted(true);
     window.addEventListener("scroll", onScrollListener);
     return () => {
@@ -42,7 +43,7 @@ export default function Navbar(props) {
       setNavbarTransparent(false);
       setIsMounted(false);
     };
-  }, []);
+  }, [isMounted]);
 
   return (
     <nav className={getNavbarStyle()}>
@@ -65,7 +66,13 @@ export default function Navbar(props) {
           {/* Desktop view */}
           <div className="flex-shrink-0 flex items-start justify-start">
             <Link to="/">
-              <Logo512 className="h-10 w-10 hidden sm:block mr-auto text-customTextColors-primary fill-current" />
+              <Logo512
+                className={`h-10 w-10 hidden sm:block mr-auto fill-current ${
+                  navbarTransparent
+                    ? "text-customRed-logo"
+                    : "text-customTextColors-primary"
+                }`}
+              />
             </Link>
           </div>
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-end">
@@ -129,7 +136,7 @@ export default function Navbar(props) {
               )
             );
           })}
-          <div className="h-2" ></div>
+          <div className="h-2"></div>
           <a href={authorData.github}>
             <IconButton
               title="GitHub"
@@ -139,7 +146,7 @@ export default function Navbar(props) {
               animated
             />
           </a>
-          <div className="h-2" ></div>
+          <div className="h-2"></div>
         </div>
       </div>
     </nav>
