@@ -1,7 +1,6 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import IconButton from "./iconbutton";
-import { faGithub, faGooglePlay } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const PackageFeaturePreview = (props) => {

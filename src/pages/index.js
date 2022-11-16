@@ -1,10 +1,8 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import Icon256 from "../components/icons/icon_256";
+
 import authorData from "../data/author_data";
-import productData from "../data/product_data";
-import AppFeaturePreview from "../components/app_feature_preview";
 import Badge960 from "../components/icons/badge_960";
 import Showcase from "../components/showcase";
 
@@ -54,14 +52,12 @@ const IndexPage = () => (
         subtitle="Check out our privacy-focused apps."
         link={"/apps"}
       />
-            <Showcase
+      <Showcase
         title="Packages"
         subtitle="Build your own using our Flutter Packages."
         link={"/packages"}
       />
     </section>
-
-
 
     {/* <section className="relative py-20">
       {productData.map((item, key) => {

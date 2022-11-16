@@ -1,8 +1,4 @@
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "gatsby";
 import * as React from "react";
-import AppFeaturePreview from "../components/app_feature_preview";
-import IconButton from "../components/iconbutton";
 
 import Layout from "../components/layout";
 import PackageFeaturePreview from "../components/package_feature_preview";

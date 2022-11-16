@@ -48,7 +48,7 @@ export default function Footer(props) {
                 <ul className="pt-2">
                   {routes.map((route, key) => {
                     const show = route.showOnFooter & !route.isLegal;
-                    if (!show) return;
+                    if (!show) return <span key={key}></span>;
                     return (
                       <FooterLink
                         key={key}
@@ -70,7 +70,7 @@ export default function Footer(props) {
                 <ul className="pt-2">
                   {routes.map((route, key) => {
                     const show = route.showOnFooter & route.isLegal;
-                    if (!show) return;
+                    if (!show) return <span key={key}></span>;
                     return (
                       <FooterLink
                         key={key}

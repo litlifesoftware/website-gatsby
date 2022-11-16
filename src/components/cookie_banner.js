@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { faCookie, faMask } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMask } from "@fortawesome/free-solid-svg-icons";
 import routes from "../routes/routes";
 import IconButton from "./iconbutton";
 import TailwindTimesIcon from "./icons/tailwind_times_icon";
@@ -29,10 +28,7 @@ const CookieBanner = (props) => {
     !props.cookieConsentAccepted && (
       <div className="py-3 px-3 sm:px-6 lg:px-8 fixed bottom-0 w-full z-50 bg-white shadow-offset bg-opacity-60 backdrop-filter backdrop-blur-md">
         <div className="mx-auto max-w-7xl flex items-center justify-between flex-wrap">
-          <div className="w-0 flex-1 flex items-center">
-            <span className="flex p-2 rounded-lg bg-gray-700">
-              <FontAwesomeIcon icon={faCookie} color={"#ffffff"} />
-            </span>
+          <div className="flex-1 flex items-center">
             <p className="ml-3 font-medium text-gray-700 truncate">
               <span className="md:hidden">We don't use cookies.</span>
               <span className="hidden md:inline">

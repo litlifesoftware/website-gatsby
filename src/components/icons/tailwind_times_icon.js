@@ -1,9 +1,11 @@
 import * as React from "react";
 
 const TailwindTimesIcon = (props) => {
+  const color = props.color ?? "text-white";
+
   return (
     <svg
-      className={"h-6 w-6" + " " + (props.color ?? "text-white")}
+      className={`h-6 w-6 ${color}`}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"

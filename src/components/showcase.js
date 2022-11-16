@@ -1,7 +1,5 @@
 import React from "react";
-import authorData from "../data/author_data";
-import IconButton from "./iconbutton";
-import { faGooglePlay } from "@fortawesome/free-brands-svg-icons";
+
 import { Link } from "gatsby";
 
 export default function Showcase(props) {
