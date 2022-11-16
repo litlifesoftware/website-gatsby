@@ -21,7 +21,10 @@ function CollapsibleCard(props) {
     <>
       <div className="mr-auto ml-auto rounded-lg w-full md:w-6/12 py-2">
         <div
+          role="button"
+          tabIndex={props.tabIndex}
           onClick={toggleHidden}
+          onKeyDown={toggleHidden}
           className={
             "bg-gray-800 text-white font-semibold hover:text-gray-700 focus:outline-none cursor-pointer" +
             (isHidden ? " rounded-lg" : " rounded-t-lg")

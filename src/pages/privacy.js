@@ -53,6 +53,7 @@ function PrivacyPage() {
           <CollapsibleCard
             initallyHidden={false}
             title="In General"
+            tabIndex="0"
             body={
               <div>
                 {" "}
@@ -86,6 +87,7 @@ function PrivacyPage() {
           />
 
           <CollapsibleCard
+            tabIndex="0"
             title="Information Collection and Use"
             body={
               <div>
@@ -142,6 +144,7 @@ function PrivacyPage() {
           />
 
           <CollapsibleCard
+            tabIndex="0"
             title="Log Data"
             body={
               <div>
@@ -161,6 +164,7 @@ function PrivacyPage() {
           />
 
           <CollapsibleCard
+            tabIndex="0"
             title="Cookies"
             body={
               <div>
@@ -185,6 +189,7 @@ function PrivacyPage() {
           />
 
           <CollapsibleCard
+            tabIndex="0"
             title="Service Providers"
             body={
               <div>
@@ -210,6 +215,7 @@ function PrivacyPage() {
           />
 
           <CollapsibleCard
+            tabIndex="0"
             title="Security"
             body={
               <div>
@@ -227,6 +233,7 @@ function PrivacyPage() {
           />
 
           <CollapsibleCard
+            tabIndex="0"
             title="Links to Other Sites"
             body={
               <div>
@@ -245,6 +252,7 @@ function PrivacyPage() {
           />
 
           <CollapsibleCard
+            tabIndex="0"
             title="Children’s Privacy"
             body={
               <div>
@@ -263,6 +271,7 @@ function PrivacyPage() {
           />
 
           <CollapsibleCard
+            tabIndex="0"
             title="Changes to This Privacy Policy"
             body={
               <div>
@@ -279,6 +288,7 @@ function PrivacyPage() {
           />
 
           <CollapsibleCard
+            tabIndex="00"
             title="Contact Us"
             body={
               <div>
