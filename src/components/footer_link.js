@@ -6,6 +6,7 @@ function FooterLink(props) {
     <Link
       className="text-gray-300 hover:text-white block py-1 rounded-md text-lg sm:text-sm font-medium"
       to={props.path}
+      title={props.title}
       onClick={() => {}}
     >
       {props.title}

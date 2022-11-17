@@ -2,7 +2,6 @@ import {
   faGithub,
   faGooglePlay,
   faInstagram,
-  faReddit,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import authorData from "../data/author_data";
@@ -22,11 +21,6 @@ const links = [
     title: "Instagram",
     url: authorData.instagram,
     icon: faInstagram,
-  },
-  {
-    title: "Reddit",
-    url: authorData.reddit,
-    icon: faReddit,
   },
   {
     title: "YouTube",

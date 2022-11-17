@@ -40,6 +40,7 @@ export default function Footer(props) {
                 </button> */}
                 <a
                   href={authorData.githubRepository.url}
+                  title="View Source Code"
                   className="text-base sm:text-xs font-mono py-2 tracking-wider text-white hover:text-gray-400 transition duration-500 ease-in-out"
                 >
                   {"<view-source>"}
@@ -104,8 +105,9 @@ export default function Footer(props) {
                 {links.map((link, key) => {
                   return (
                     <a
+                    key={key}
                       href={link.url}
-                      key={key}
+                      title={link.title}
                       className="text-gray-300 hover:text-white inline px-2 rounded-md text-2xl sm:text-lg font-medium"
                     >
                       {<FontAwesomeIcon icon={link.icon} />}
