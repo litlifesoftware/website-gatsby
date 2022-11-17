@@ -19,7 +19,7 @@ export default function Navbar(props) {
   }
 
   function getNavbarStyle() {
-    const style = "fixed top-0 w-full z-50";
+    const style = "fixed top-0 w-full z-50 ";
 
     if (drawerExpanded || !navbarTransparent)
       return `${style} bg-white shadow-md`;
@@ -46,7 +46,7 @@ export default function Navbar(props) {
   }, [isMounted]);
 
   return (
-    <nav className={getNavbarStyle()}>
+    <nav style={{ transition: "all .75s ease" }} className={getNavbarStyle()}>
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -72,6 +72,7 @@ export default function Navbar(props) {
                     ? "text-customRed-logo"
                     : "text-customTextColors-primary"
                 }`}
+                style={{ transition: "all .75s ease" }}
               />
             </Link>
           </div>
