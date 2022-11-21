@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `LitLitSoftware`,
+    title: `LitLifeSoftware`,
     description: `choose a lit life`,
     author: `@litlifesoftware`,
     siteUrl: `https://litlifesoftware.github.io/`,
